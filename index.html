@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>LBS</title>
         <link rel="stylesheet" href="./style.min.css" />
-        <script src="./data.js"></script>
+        <script src="./data.min.js"></script>
         <script src="./script.min.js"></script>
     </head>
     <body>
@@ -46,6 +46,10 @@
                         <input type="checkbox" id="option_underline" checked />
                         spacer 제거
                     </label>
+                    <label for="option_split">
+                        <input type="checkbox" id="option_split" />
+                        2페이지로 분리
+                    </label>
                 </div>
             </div>
 
@@ -62,11 +66,11 @@
                         COC
                     </label>
                     <label for="rule_magica_logia">
-                        <input type="radio" disabled name="rule" id="rule_magica_logia" value="magica_logia" />
+                        <input type="radio" disabled name="rule" id="rule_magica_logia" value="magicalogia" disabled />
                         마기로기
                     </label>
                     <label for="rule_dx3rd">
-                        <input type="radio" disabled name="rule" id="rule_dx3rd" value="dx3rd" />
+                        <input type="radio" disabled name="rule" id="rule_dx3rd" value="dx3rd" disabled />
                         더블크로스
                     </label>
                 </div>
@@ -75,7 +79,7 @@
             <div class="wrap col">
                 <h2>4. 커스텀 CSS 추가(선택)</h2>
 
-                <textarea id="custom_css" placeholder="커스텀 CSS가 필요하다면 추가하세요."></textarea>
+                <textarea id="custom_css" placeholder="커스텀 CSS가 필요하다면 추가하세요. 선택자 상위에 'textchatcontainer'를 추가하는 것을 추천합니다."></textarea>
             </div>
 
             <button type="button" id="btn_submit" class="btn" disabled>5. 변환</button>
@@ -94,6 +98,11 @@
             <div class="wrap col">
                 <textarea id="result"></textarea>
                 <button type="button" id="btn_copy_result" class="btn btn-copy" disabled>8. 복사 <span></span></button>
+            </div>
+
+            <div id="sub_result" class="wrap col">
+                <textarea id="result2"></textarea>
+                <button type="button" id="btn_copy_result2" class="btn btn-copy" disabled>9. 2페이지 복사 <span></span></button>
             </div>
         </div>
     </body>
