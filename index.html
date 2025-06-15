@@ -15,7 +15,7 @@
             </div>
 
             <div class="wrap col">
-                <h1>LBS : ROLL20 로그 변환기</h1>
+                <h1>ROLL20 로그 변환기</h1>
                 <b>유의사항</b>
                 <p>
                     * PC 및 브라우저 사양에 따라 딜레이가 생길 수 있습니다.<br />
@@ -26,6 +26,7 @@
 
             <div class="wrap col">
                 <h2>1. 로그 업로드</h2>
+                <div>Chat Archive 페이지에서 개발자도구(F12)를 연 뒤, 'textchatcontainer'를 모두 복사해서 붙여넣습니다.</div>
 
                 <textarea id="log" placeholder="Chat Archive의 'textchatcontainer'를 모두 복사해서 붙여넣습니다."></textarea>
             </div>
@@ -35,7 +36,7 @@
 
                 <div class="wrap row">
                     <label for="option_more">
-                        <input type="checkbox" id="option_more" />
+                        <input type="checkbox" id="option_more" checked />
                         더보기/접기 추가(티스토리용)
                     </label>
                     <label for="option_myself">
@@ -45,10 +46,6 @@
                     <label for="option_underline">
                         <input type="checkbox" id="option_underline" checked />
                         spacer 제거
-                    </label>
-                    <label for="option_split">
-                        <input type="checkbox" id="option_split" />
-                        2페이지로 분리
                     </label>
                 </div>
             </div>
@@ -66,11 +63,11 @@
                         COC
                     </label>
                     <label for="rule_magica_logia">
-                        <input type="radio" disabled name="rule" id="rule_magica_logia" value="magicalogia" disabled />
+                        <input type="radio" name="rule" id="rule_magica_logia" value="magicalogia" />
                         마기로기
                     </label>
                     <label for="rule_dx3rd">
-                        <input type="radio" disabled name="rule" id="rule_dx3rd" value="dx3rd" disabled />
+                        <input type="radio" name="rule" id="rule_dx3rd" value="dx3rd" />
                         더블크로스
                     </label>
                 </div>
@@ -91,18 +88,27 @@
                     <div id="result_preview_style" style="font-size: 0; width: 0; height: 0"></div>
                     <div id="result_preview" contenteditable="true">먼저 로그를 변환해주세요.</div>
                 </div>
-            </div>
 
-            <button type="button" id="btn_submit_re" class="btn" disabled>7. 재변환</button>
+                <label for="option_split">
+                    <input type="checkbox" id="option_split" />
+                    2페이지로 분리 (필요 시 체크)
+                </label>
+
+                <button type="button" id="btn_submit_re" class="btn" disabled>7. 재변환</button>
+            </div>
 
             <div class="wrap col">
-                <textarea id="result"></textarea>
-                <button type="button" id="btn_copy_result" class="btn btn-copy" disabled>8. 복사 <span></span></button>
-            </div>
+                <h2>8. 로그 복사</h2>
 
-            <div id="sub_result" class="wrap col">
-                <textarea id="result2"></textarea>
-                <button type="button" id="btn_copy_result2" class="btn btn-copy" disabled>9. 2페이지 복사 <span></span></button>
+                <div class="wrap col">
+                    <textarea id="result"></textarea>
+                    <button type="button" id="btn_copy_result" class="btn btn-copy" disabled>8. 복사 <span></span></button>
+                </div>
+
+                <div id="sub_result" class="wrap col">
+                    <textarea id="result2"></textarea>
+                    <button type="button" id="btn_copy_result2" class="btn btn-copy" disabled>8. 2페이지 복사 <span></span></button>
+                </div>
             </div>
         </div>
     </body>
